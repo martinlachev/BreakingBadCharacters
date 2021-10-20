@@ -9,7 +9,8 @@ import Foundation
 import Combine
 
 protocol ApiClientProtocol {
-    
+    var url: String { get }
+    func get() -> AnyPublisher<Data, ApiError>
 }
 
 extension ApiClientProtocol {
@@ -32,5 +33,4 @@ extension ApiClientProtocol {
             }
             .eraseToAnyPublisher()
     }
-
 }

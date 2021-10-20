@@ -11,10 +11,16 @@
 		F4535A79271F1C2D0032339C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535A78271F1C2D0032339C /* ContentView.swift */; };
 		F4535A7B271F1C2F0032339C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4535A7A271F1C2F0032339C /* Assets.xcassets */; };
 		F4535A7E271F1C2F0032339C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4535A7D271F1C2F0032339C /* Preview Assets.xcassets */; };
-		F4535AA2271F29D40032339C /* ApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535AA1271F29D40032339C /* ApiClientTests.swift */; };
+		F4535AA2271F29D40032339C /* CharacterEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535AA1271F29D40032339C /* CharacterEndpointTests.swift */; };
 		F4535AA7271F2B6A0032339C /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535AA6271F2B6A0032339C /* ApiClientProtocol.swift */; };
 		F4535AA9271F2DE30032339C /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535AA8271F2DE30032339C /* ApiError.swift */; };
 		F4535AAC271F30300032339C /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535AAB271F30300032339C /* ErrorResponse.swift */; };
+		F4CE0913272065F9007D99E3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE0912272065F9007D99E3 /* Path.swift */; };
+		F4CE0916272074D8007D99E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE0915272074D8007D99E3 /* Constants.swift */; };
+		F4CE09182720776A007D99E3 /* MockCharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE09172720776A007D99E3 /* MockCharacterEndpoint.swift */; };
+		F4CE092027207B55007D99E3 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE091F27207B55007D99E3 /* Characters.swift */; };
+		F4CE092227207DAC007D99E3 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE092127207DAC007D99E3 /* CharactersViewModel.swift */; };
+		F4CE09242720989E007D99E3 /* CharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CE09232720989E007D99E3 /* CharactersResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +40,16 @@
 		F4535A7A271F1C2F0032339C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4535A7D271F1C2F0032339C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4535A83271F1C2F0032339C /* BreakingBadCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4535AA1271F29D40032339C /* ApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTests.swift; sourceTree = "<group>"; };
+		F4535AA1271F29D40032339C /* CharacterEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEndpointTests.swift; sourceTree = "<group>"; };
 		F4535AA6271F2B6A0032339C /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
 		F4535AA8271F2DE30032339C /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F4535AAB271F30300032339C /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		F4CE0912272065F9007D99E3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		F4CE0915272074D8007D99E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4CE09172720776A007D99E3 /* MockCharacterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterEndpoint.swift; sourceTree = "<group>"; };
+		F4CE091F27207B55007D99E3 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		F4CE092127207DAC007D99E3 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		F4CE09232720989E007D99E3 /* CharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				F4535AA4271F2B450032339C /* Networking */,
+				F4CE091927207AFD007D99E3 /* Screens */,
+				F4CE0914272074CA007D99E3 /* Common */,
 				F4535A76271F1C2D0032339C /* BreakingBadCharactersApp.swift */,
 				F4535A78271F1C2D0032339C /* ContentView.swift */,
 				F4535A7A271F1C2F0032339C /* Assets.xcassets */,
@@ -108,7 +122,7 @@
 		F4535AA0271F28ED0032339C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				F4535AA1271F29D40032339C /* ApiClientTests.swift */,
+				F4535AA1271F29D40032339C /* CharacterEndpointTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 		F4535AA3271F2A8A0032339C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				F4CE09172720776A007D99E3 /* MockCharacterEndpoint.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -123,6 +138,8 @@
 		F4535AA4271F2B450032339C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F4CE092527209941007D99E3 /* Character */,
+				F4CE091127206195007D99E3 /* Helpers */,
 				F4535AAA271F301E0032339C /* Responses */,
 				F4535AA5271F2B4F0032339C /* Protocols */,
 			);
@@ -133,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				F4535AA6271F2B6A0032339C /* ApiClientProtocol.swift */,
-				F4535AA8271F2DE30032339C /* ApiError.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -142,8 +158,82 @@
 			isa = PBXGroup;
 			children = (
 				F4535AAB271F30300032339C /* ErrorResponse.swift */,
+				F4CE09232720989E007D99E3 /* CharactersResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		F4CE091127206195007D99E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F4535AA8271F2DE30032339C /* ApiError.swift */,
+				F4CE0912272065F9007D99E3 /* Path.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F4CE0914272074CA007D99E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE0915272074D8007D99E3 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F4CE091927207AFD007D99E3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE091B27207B24007D99E3 /* Character */,
+				F4CE091A27207B16007D99E3 /* Characters */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F4CE091A27207B16007D99E3 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE091E27207B41007D99E3 /* Model */,
+				F4CE091D27207B35007D99E3 /* ViewModel */,
+				F4CE091C27207B2F007D99E3 /* View */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		F4CE091B27207B24007D99E3 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		F4CE091C27207B2F007D99E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4CE091D27207B35007D99E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE092127207DAC007D99E3 /* CharactersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F4CE091E27207B41007D99E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4CE091F27207B55007D99E3 /* Characters.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4CE092527209941007D99E3 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,10 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CE092227207DAC007D99E3 /* CharactersViewModel.swift in Sources */,
 				F4535AAC271F30300032339C /* ErrorResponse.swift in Sources */,
 				F4535A79271F1C2D0032339C /* ContentView.swift in Sources */,
 				F4535AA9271F2DE30032339C /* ApiError.swift in Sources */,
+				F4CE09242720989E007D99E3 /* CharactersResponse.swift in Sources */,
+				F4CE092027207B55007D99E3 /* Characters.swift in Sources */,
 				F4535AA7271F2B6A0032339C /* ApiClientProtocol.swift in Sources */,
+				F4CE0916272074D8007D99E3 /* Constants.swift in Sources */,
+				F4CE0913272065F9007D99E3 /* Path.swift in Sources */,
 				F4535A77271F1C2D0032339C /* BreakingBadCharactersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4535AA2271F29D40032339C /* ApiClientTests.swift in Sources */,
+				F4535AA2271F29D40032339C /* CharacterEndpointTests.swift in Sources */,
+				F4CE09182720776A007D99E3 /* MockCharacterEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
