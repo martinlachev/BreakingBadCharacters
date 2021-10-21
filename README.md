@@ -2,4 +2,4 @@
 
 Current progress 
 
-![Alt Text](../images/progress.gif)
+![Alt Text](https://github.com/martinlachev/BreakingBadCharacters/blob/main/images/progress.gif)
