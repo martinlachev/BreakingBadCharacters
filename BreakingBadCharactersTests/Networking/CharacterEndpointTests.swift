@@ -25,15 +25,15 @@ class CharacterEndpointTests: XCTestCase {
     func testSuccessfulRequest() throws {
         characterEndpoint.get()
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] value in
+            .sink(receiveCompletion: { value in
                 switch value {
                     case .failure(_):
                         break
                     case .finished:
                         break
                 }
-            }, receiveValue: { [weak self] characters in
-                if let data = try? JSONDecoder().decode(CharactersResponse.self, from: characters) {
+            }, receiveValue: { characters in
+                if let data = try? JSONDecoder().decode([Character].self, from: characters) {
                     // vallidate recieved data
                 }
             })
