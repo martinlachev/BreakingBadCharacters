@@ -12,7 +12,6 @@ class CharactersViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var isLoading: Bool = false
     @Published var showAlert: Bool = false
-    @Published var showDeleteAlert: Bool = false
     @Published var characters: [Character] = []
     private var disposables = Set<AnyCancellable>()
 

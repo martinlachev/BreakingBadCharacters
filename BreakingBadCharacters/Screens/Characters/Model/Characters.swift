@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character: Codable, Identifiable {
+struct Character: Codable, Identifiable, Hashable {
     let id: Int
     let imageUrl: String
     let name: String
