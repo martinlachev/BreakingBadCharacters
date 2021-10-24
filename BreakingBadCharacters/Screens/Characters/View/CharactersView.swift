@@ -27,7 +27,7 @@ struct CharactersView: View {
                 VStack {
                     VStack {
                         HStack {
-                            Text("Season Appearnce Filter:")
+                            Text("Season Appearnce Filter")
                                 .font(.system(.headline))
                             Spacer()
                         }
@@ -49,7 +49,7 @@ struct CharactersView: View {
                     }
                     StaggeredGrid(
                         columns: columns,
-                        list: viewModel.characters,
+                        list: viewModel.filterCharacters(searchTex: searchText, seasonFilters: selectedSeasonFilters),
                         content: { character in
                             CharactersCardView(character: character)
                                 .matchedGeometryEffect(id: character.id, in: animation)
