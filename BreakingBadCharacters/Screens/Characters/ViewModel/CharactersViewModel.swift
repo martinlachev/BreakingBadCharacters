@@ -13,11 +13,13 @@ class CharactersViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var showAlert: Bool = false
     @Published var characters: [Character] = []
+    @Published var seasonFilters: [SeasonFilters] = []
+    @Published var selectedSeasonFilters: [SeasonFilters] = []
     private var disposables = Set<AnyCancellable>()
 
     private let portfolioEndpoint = CharacterEndpoint()
 
-    func fetchCharacters() {
+    public func fetchCharacters() {
         isLoading = true
         portfolioEndpoint.get()
             .receive(on: DispatchQueue.main)
@@ -41,5 +43,20 @@ class CharactersViewModel: ObservableObject {
                 }
             })
             .store(in: &disposables)
+    }
+
+    public func createSeasonFilters() {
+        for filterIndex in 1...5 {
+            seasonFilters.append(
+                SeasonFilters(
+                    id: filterIndex,
+                    name: "Season \(filterIndex)"
+                )
+            )
+        }
+    }
+
+    public func filterCharacters(searchTex: String, seasonFilters:[SeasonFilters]) -> [Character] {
+        return characters
     }
 }
