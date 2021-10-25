@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-@testable import BreakingBadCharacters
+@testable import Breaking_Bad_Characters
 
 class MockCharacterEndpoint: ApiClientProtocol {
     var url: String
