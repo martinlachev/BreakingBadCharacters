@@ -11,8 +11,6 @@ struct CharactersView: View {
     @ObservedObject var viewModel = CharactersViewModel()
     @State var columns: Int = 3
     @State var searchText: String = ""
-    @State var seasonFilters: [SeasonFilters] = []
-    @State var selectedSeasonFilters: [SeasonFilters] = []
     @Namespace var animation
     
     var body: some View {
@@ -34,13 +32,13 @@ struct CharactersView: View {
                         .padding(.leading, 15)
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 20) {
-                                ForEach(seasonFilters) { filter in
-                                    Filter(title: filter.name, isSelected: self.selectedSeasonFilters.contains(filter), action: {
-                                        if self.selectedSeasonFilters.contains(filter) {
-                                            self.selectedSeasonFilters.removeAll(where: { $0 == filter })
+                                ForEach(viewModel.seasonFilters) { filter in
+                                    Filter(title: filter.name, isSelected: viewModel.selectedSeasonFilters.contains(filter), action: {
+                                        if viewModel.selectedSeasonFilters.contains(filter) {
+                                            viewModel.selectedSeasonFilters.removeAll(where: { $0 == filter })
                                         }
                                         else {
-                                            self.selectedSeasonFilters.append(filter)
+                                            viewModel.selectedSeasonFilters.append(filter)
                                         }
                                     })
                                 }
@@ -49,7 +47,7 @@ struct CharactersView: View {
                     }
                     StaggeredGrid(
                         columns: columns,
-                        list: viewModel.filterCharacters(searchTex: searchText, seasonFilters: selectedSeasonFilters),
+                        list: viewModel.filterCharacters(searchText: searchText),
                         content: { character in
                             CharactersCardView(character: character)
                                 .matchedGeometryEffect(id: character.id, in: animation)
@@ -90,8 +88,6 @@ struct CharactersView: View {
         .onAppear {
             viewModel.fetchCharacters()
             viewModel.createSeasonFilters()
-            seasonFilters = viewModel.seasonFilters
-            selectedSeasonFilters = viewModel.selectedSeasonFilters
         }
     }
 }
@@ -104,7 +100,7 @@ struct CharactersCardView: View{
             VStack {
                 AsyncImage(
                     url: URL(string: character.imageUrl)!,
-                    placeholder: { Text("Loading ...") },
+                    placeholder: { ProgressView() },
                     image: { Image(uiImage: $0).resizable() }
                 )
                     .aspectRatio(contentMode: .fit)

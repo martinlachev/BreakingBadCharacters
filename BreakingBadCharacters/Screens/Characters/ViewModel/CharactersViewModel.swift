@@ -26,14 +26,14 @@ class CharactersViewModel: ObservableObject {
             .sink(receiveCompletion: { [weak self] value in
                 guard let self = self else { return }
                 switch value {
-                case .failure(let error):
-                    self.isLoading = false
-                    self.errorMessage = error.errorDescription!
-                    self.showAlert = true
-                    break
-                case .finished:
-                    self.isLoading = false
-                    break
+                    case .failure(let error):
+                        self.isLoading = false
+                        self.errorMessage = error.errorDescription!
+                        self.showAlert = true
+                        break
+                    case .finished:
+                        self.isLoading = false
+                        break
                 }
             }, receiveValue: { [weak self] value in
                 guard let self = self else { return }
@@ -56,7 +56,25 @@ class CharactersViewModel: ObservableObject {
         }
     }
 
-    public func filterCharacters(searchTex: String, seasonFilters:[SeasonFilters]) -> [Character] {
-        return characters
+    public func filterCharacters(searchText: String) -> [Character] {
+        var tempCharacters = characters
+
+        if !searchText.isEmpty {
+            tempCharacters = tempCharacters.filter({
+                $0.name.contains(searchText)
+            })
+        }
+
+        if selectedSeasonFilters.count > 0 {
+            tempCharacters = tempCharacters.filter {
+                $0.seasonAppearance.filter { seasonAppearance in
+                    selectedSeasonFilters.filter{
+                        seasonAppearance == $0.id
+                    }.count > 0
+                }.count > 0
+            }
+        }
+
+        return tempCharacters
     }
 }
