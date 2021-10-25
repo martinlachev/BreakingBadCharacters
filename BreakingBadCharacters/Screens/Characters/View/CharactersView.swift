@@ -94,9 +94,10 @@ struct CharactersView: View {
 
 struct CharactersCardView: View{
     var character: Character
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View{
-        NavigationLink(destination: {Text("")}) {
+        NavigationLink(destination: {CharacterView(character: character)}) {
             VStack {
                 AsyncImage(
                     url: URL(string: character.imageUrl)!,
@@ -106,7 +107,9 @@ struct CharactersCardView: View{
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
 
-                Text(character.name).font(.system(.headline))
+                Text(character.name)
+                    .font(.system(.headline))
+                    .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
             }
         }
     }
@@ -131,7 +134,8 @@ struct Filter: View {
                     .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                     .font(.headline)
                     .frame(width: 110, height: 40)
-                    .background(Color.gray).cornerRadius(10)
+                    .background(Color.init(uiColor: .systemGray2))
+                    .cornerRadius(10)
             }
 
         }

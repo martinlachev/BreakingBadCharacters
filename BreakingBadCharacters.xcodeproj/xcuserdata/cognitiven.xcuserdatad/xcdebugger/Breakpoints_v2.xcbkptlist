@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B0249E6E-9BA1-48AA-BBB1-EF55E7D410E4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadCharacters/Screens/Characters/ViewModel/CharactersViewModel.swift"
@@ -48,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
-            landmarkName = "filterCharacters(searchText:seasonFilters:)"
+            landmarkName = "filterCharacters(searchText:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
