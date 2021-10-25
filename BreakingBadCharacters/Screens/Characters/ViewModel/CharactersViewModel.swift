@@ -68,10 +68,12 @@ class CharactersViewModel: ObservableObject {
         if selectedSeasonFilters.count > 0 {
             tempCharacters = tempCharacters.filter {
                 $0.seasonAppearance.filter { seasonAppearance in
-                    selectedSeasonFilters.filter{
-                        seasonAppearance == $0.id
-                    }.count > 0
-                }.count > 0
+                    selectedSeasonFilters
+                        .filter{
+                            seasonAppearance == $0.id
+                        }.count > 0
+                }
+                .count > 0
             }
         }
 

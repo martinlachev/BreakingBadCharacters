@@ -13,6 +13,7 @@
 		E17AEB2927259B4F00804E74 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AEB2827259B4F00804E74 /* ImageCache.swift */; };
 		E17AEB2B27259B8500804E74 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17AEB2A27259B8500804E74 /* AsyncImage.swift */; };
 		F40C91902726CADE007843CD /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C918F2726CADE007843CD /* CharacterView.swift */; };
+		F40C91922726DBB4007843CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40C91912726DBB4007843CD /* LaunchScreen.storyboard */; };
 		F4535A77271F1C2D0032339C /* BreakingBadCharactersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4535A76271F1C2D0032339C /* BreakingBadCharactersApp.swift */; };
 		F4535A7B271F1C2F0032339C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4535A7A271F1C2F0032339C /* Assets.xcassets */; };
 		F4535A7E271F1C2F0032339C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4535A7D271F1C2F0032339C /* Preview Assets.xcassets */; };
@@ -47,7 +48,8 @@
 		E17AEB2827259B4F00804E74 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		E17AEB2A27259B8500804E74 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		F40C918F2726CADE007843CD /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
-		F4535A73271F1C2D0032339C /* BreakingBadCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBadCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F40C91912726DBB4007843CD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4535A73271F1C2D0032339C /* Breaking Bad Characters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breaking Bad Characters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4535A76271F1C2D0032339C /* BreakingBadCharactersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersApp.swift; sourceTree = "<group>"; };
 		F4535A7A271F1C2F0032339C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4535A7D271F1C2F0032339C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				F4535A7A271F1C2F0032339C /* Assets.xcassets */,
 				F4535A7C271F1C2F0032339C /* Preview Content */,
+				F40C91912726DBB4007843CD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -131,7 +134,7 @@
 		F4535A74271F1C2D0032339C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4535A73271F1C2D0032339C /* BreakingBadCharacters.app */,
+				F4535A73271F1C2D0032339C /* Breaking Bad Characters.app */,
 				F4535A83271F1C2F0032339C /* BreakingBadCharactersTests.xctest */,
 			);
 			name = Products;
@@ -306,7 +309,7 @@
 			);
 			name = BreakingBadCharacters;
 			productName = BreakingBadCharacters;
-			productReference = F4535A73271F1C2D0032339C /* BreakingBadCharacters.app */;
+			productReference = F4535A73271F1C2D0032339C /* Breaking Bad Characters.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F4535A82271F1C2F0032339C /* BreakingBadCharactersTests */ = {
@@ -370,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40C91922726DBB4007843CD /* LaunchScreen.storyboard in Resources */,
 				F4535A7E271F1C2F0032339C /* Preview Assets.xcassets in Resources */,
 				F4535A7B271F1C2F0032339C /* Assets.xcassets in Resources */,
 			);
@@ -559,6 +563,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -568,10 +574,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.cognitiven.BreakingBadCharacters;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Breaking Bad Characters";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -589,6 +595,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -598,10 +606,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.cognitiven.BreakingBadCharacters;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Breaking Bad Characters";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

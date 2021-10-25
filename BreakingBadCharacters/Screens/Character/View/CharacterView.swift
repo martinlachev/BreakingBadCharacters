@@ -53,8 +53,8 @@ struct CharacterView : View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
-                            ForEach(0..<character.seasonAppearance.count) {index in
-                                Text("Season \(index + 1)")
+                            ForEach(character.seasonAppearance,id: \.self) {index in
+                                Text("Season \(index)")
                                     .foregroundColor(.white)
                                     .font(.headline)
                                     .frame(width: 110, height: 40)
